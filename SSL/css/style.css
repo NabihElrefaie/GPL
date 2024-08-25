@@ -323,7 +323,7 @@
 
 @media (min-width: 991.98px) {
     .sticky-top .navbar-light {
-        background: var(--bs-light) !important;
+        /*background: var(--bs-light) !important;*/
     }
 
     /*** Top and Bottom borders go out ***/
@@ -441,7 +441,8 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, 0.6));
+    /*background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, 0.6));*/
+    background: linear-gradient(rgba(0, 0, 0, .6), rgb(50 96 149 / 61%));
     background-size: cover;
 }
 
@@ -473,7 +474,7 @@
 
 /*** Counter Facts Start ***/
 .counter-facts {
-    background: linear-gradient(rgba(255, 255, 255, .9), rgba(255, 255, 255, 0.8)), url(../img/breadcrumb.png);
+    background: linear-gradient(rgba(255, 255, 255, .9), rgba(255, 255, 255, 0.8)), url(../img/breadcrumb.webp);
     background-size: cover;
     background-attachment: fixed;
     background-position: center center;
@@ -937,3 +938,34 @@
     background: var(--tp-theme-primary) !important;
 }
 /*** copyright end ***/
+
+
+.partners-container {
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+.partners-scroll {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    animation: scrollX 20s linear infinite; /* Adjust duration for different speed */
+}
+.partners-scroll img {
+    height: 200px;
+    width: 200px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0 10px; /* Space between images */
+}
+@keyframes scrollX {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
